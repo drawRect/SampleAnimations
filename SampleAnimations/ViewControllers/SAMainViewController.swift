@@ -13,14 +13,16 @@ class SAMainViewController: UIViewController {
     //MARK:- iVars
     let sectionHeaderHeight:CGFloat = 44
     fileprivate let reuseIdentifier = "Cell"
-    @IBOutlet weak var tableView: UITableView!{didSet{
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        tableView.showsVerticalScrollIndicator = false
-        tableView.showsHorizontalScrollIndicator = false
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.sectionHeaderHeight = 44.0
-        }}
+    @IBOutlet weak var tableView: UITableView!{
+        didSet {
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+            tableView.showsVerticalScrollIndicator = false
+            tableView.showsHorizontalScrollIndicator = false
+            tableView.dataSource = self
+            tableView.delegate = self
+            tableView.sectionHeaderHeight = 44.0
+        }
+    }
     var animationSource: [SAAnimationType] = [
         SAAnimationType.init(name: .push, properties:[
             SAAnimationProperty.init(animationName: .fromRight, type: .push, subtype: .right),
@@ -48,8 +50,8 @@ class SAMainViewController: UIViewController {
     //MARK:- Overridden functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "HomeVC"
-        view.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
+        self.title = "Home VC"
+        view.backgroundColor = UIColor.viewBackgroundColor
         self.navigationController?.navigationBar.isTranslucent = false
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +72,7 @@ class SAMainViewController: UIViewController {
         transition.subtype = property.subtype?.desc
         transition.timingFunction = CAMediaTimingFunction(name: property.timingFunctionName)
         view.window?.layer.add(transition, forKey: kCATransition)
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SANextViewController") as? SANextViewController else {return}
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SADetailViewController") as? SADetailViewController else {return}
         vc.animationProperty = property
         self.navigationController?.pushViewController(vc, animated: true)
     }

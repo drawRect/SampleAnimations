@@ -8,19 +8,21 @@
 
 import UIKit
 
-class SANextViewController: UIViewController {
-
+class SADetailViewController: UIViewController {
+    
     //MARK:- iVars
     var animationProperty: SAAnimationProperty?
-    @IBOutlet weak var detailLbl: UILabel!{didSet{
-        detailLbl.font = UIFont.systemFont(ofSize: 14)
-        }}
+    @IBOutlet weak var detailLbl: UILabel!{
+        didSet {
+            detailLbl.font = UIFont.systemFont(ofSize: 14)
+        }
+    }
     
     //MARK:- Overridden functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
-        self.title = "FirstVC"
+        view.backgroundColor = UIColor.viewBackgroundColor
+        self.title = "Detail VC"
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(didTapBackBtn(_:)))
         if let property = animationProperty {
@@ -43,7 +45,6 @@ class SANextViewController: UIViewController {
                 property.subtype = .bottom
             }else if property.subtype == .bottom {
                 property.subtype = .top
-                
             }
             animationProperty = property
         }

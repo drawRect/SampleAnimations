@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E1410B2205C0DA400A62611 /* SANextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1410B1205C0DA400A62611 /* SANextViewController.swift */; };
+		7E1410B2205C0DA400A62611 /* SADetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1410B1205C0DA400A62611 /* SADetailViewController.swift */; };
 		7E1410B5205D18E500A62611 /* SAAnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1410B4205D18E500A62611 /* SAAnimationType.swift */; };
 		7E1410B7205D192200A62611 /* SAAnimationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1410B6205D192200A62611 /* SAAnimationProperty.swift */; };
+		7EA0DAFD205D658500C01F41 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA0DAFC205D658500C01F41 /* UIColor+Extension.swift */; };
 		7EFF080F205BF250005712BA /* SAAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF080E205BF250005712BA /* SAAppDelegate.swift */; };
 		7EFF0811205BF250005712BA /* SAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF0810205BF250005712BA /* SAMainViewController.swift */; };
 		7EFF0814205BF250005712BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFF0812205BF250005712BA /* Main.storyboard */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E1410B1205C0DA400A62611 /* SANextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SANextViewController.swift; sourceTree = "<group>"; };
+		7E1410B1205C0DA400A62611 /* SADetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SADetailViewController.swift; sourceTree = "<group>"; };
 		7E1410B4205D18E500A62611 /* SAAnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAAnimationType.swift; sourceTree = "<group>"; };
 		7E1410B6205D192200A62611 /* SAAnimationProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAAnimationProperty.swift; sourceTree = "<group>"; };
+		7EA0DAFC205D658500C01F41 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7EFF080B205BF250005712BA /* SampleAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFF080E205BF250005712BA /* SAAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAAppDelegate.swift; sourceTree = "<group>"; };
 		7EFF0810205BF250005712BA /* SAMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAMainViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7EA0DAFB205D656900C01F41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EA0DAFC205D658500C01F41 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7EA0DAFE205D662D00C01F41 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF080E205BF250005712BA /* SAAppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7EA0DAFF205D663700C01F41 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF0812205BF250005712BA /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		7EA0DB00205D667B00C01F41 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EFF0810205BF250005712BA /* SAMainViewController.swift */,
+				7E1410B1205C0DA400A62611 /* SADetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7EFF0802205BF250005712BA = {
 			isa = PBXGroup;
 			children = (
@@ -70,10 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				7E1410B3205D18B700A62611 /* Model */,
-				7EFF080E205BF250005712BA /* SAAppDelegate.swift */,
-				7EFF0812205BF250005712BA /* Main.storyboard */,
-				7EFF0810205BF250005712BA /* SAMainViewController.swift */,
-				7E1410B1205C0DA400A62611 /* SANextViewController.swift */,
+				7EA0DAFB205D656900C01F41 /* Extensions */,
+				7EA0DAFE205D662D00C01F41 /* AppDelegate */,
+				7EA0DAFF205D663700C01F41 /* StoryBoards */,
+				7EA0DB00205D667B00C01F41 /* ViewControllers */,
 				7EFF0815205BF250005712BA /* Assets.xcassets */,
 				7EFF0817205BF250005712BA /* LaunchScreen.storyboard */,
 				7EFF081A205BF250005712BA /* Info.plist */,
@@ -157,7 +192,8 @@
 				7E1410B5205D18E500A62611 /* SAAnimationType.swift in Sources */,
 				7E1410B7205D192200A62611 /* SAAnimationProperty.swift in Sources */,
 				7EFF0811205BF250005712BA /* SAMainViewController.swift in Sources */,
-				7E1410B2205C0DA400A62611 /* SANextViewController.swift in Sources */,
+				7EA0DAFD205D658500C01F41 /* UIColor+Extension.swift in Sources */,
+				7E1410B2205C0DA400A62611 /* SADetailViewController.swift in Sources */,
 				7EFF080F205BF250005712BA /* SAAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

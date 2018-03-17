@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
         </scene>
-        <!--Next View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="gdQ-s8-amV">
             <objects>
-                <viewController storyboardIdentifier="SANextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M4J-uj-XkD" customClass="SANextViewController" customModule="SampleAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SADetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M4J-uj-XkD" customClass="SADetailViewController" customModule="SampleAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7qS-re-lUY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
