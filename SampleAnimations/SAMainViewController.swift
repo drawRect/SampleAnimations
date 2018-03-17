@@ -48,7 +48,7 @@ class SAMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "HomeVC"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
         self.navigationController?.navigationBar.isTranslucent = false
     }
     override func viewWillAppear(_ animated: Bool) {
