@@ -11,6 +11,7 @@ import UIKit
 class SAMainViewController: UIViewController {
     
     //MARK:- iVars
+    let sectionHeaderHeight:CGFloat = 44
     fileprivate let reuseIdentifier = "Cell"
     @IBOutlet weak var tableView: UITableView!{didSet{
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -73,6 +74,17 @@ class SAMainViewController: UIViewController {
         vc.animationProperty = property
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    fileprivate func headerView() -> UIView {
+        let hv = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: sectionHeaderHeight))
+        hv.backgroundColor = .white
+        return hv
+    }
+    fileprivate func headerLabel() -> UILabel {
+        let hl = UILabel(frame: CGRect(x: 10, y: 0, width: tableView.frame.width-20, height: sectionHeaderHeight))
+        hl.font = UIFont.systemFont(ofSize: 16)
+        hl.textColor = UIColor.brown
+        return hl
+    }
 }
 
 extension SAMainViewController: UITableViewDataSource {
@@ -89,14 +101,11 @@ extension SAMainViewController: UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 44.0))
-        view.backgroundColor = .white
-        let label = UILabel(frame: CGRect(x: 10, y: 0, width: view.frame.width-20, height: view.frame.height))
-        label.text = animationSource[section].name.desc
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = UIColor.brown
-        view.addSubview(label)
-        return view
+        let hv = headerView()
+        let hl = headerLabel()
+        hl.text = animationSource[section].name.desc
+        hv.addSubview(hl)
+        return hv
     }
 }
 
